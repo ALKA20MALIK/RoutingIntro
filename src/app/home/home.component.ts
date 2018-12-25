@@ -12,9 +12,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  onLoadServers(){
+  onLoadServers(id:string){
     //calculation
-    this.router.navigate(['/servers'])
+    this.router.navigate(['/servers',id,'edit'],{queryParams:{allowEdit:'1'},fragment:'loading'} )
   }
 
 }
